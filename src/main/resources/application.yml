@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev
+  config:
+    import: configserver:http://
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, info
